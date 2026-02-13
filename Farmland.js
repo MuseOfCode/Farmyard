@@ -6,7 +6,19 @@ class Farmland {
     }
 
     begin(){
-        console.log("Hello???")
+        
+        const testMap = new Image()
+        testMap.onload = () => {
+            this.renderCtx.drawImage(testMap, 0, 0)
+        }
+        testMap.src = "assets/maps/testMap.png"
+
+        const farmer = new Image()
+        farmer.onload = () => {
+            this.renderCtx.drawImage(farmer, 0, 0, 16, 32, 0, 0, 16, 32)
+        }
+
+        farmer.src = "assets/sprites/player.png"
     }
 
 
