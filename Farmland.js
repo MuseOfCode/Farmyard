@@ -28,9 +28,15 @@ class Farmland {
         y : 50,
 
     })
-   
 
-    farmer.sprite.draw(this.renderCtx)
+    
+    setTimeout(() => {
+          farmer.sprite.draw(this.renderCtx)
+    
+
+    }, 100)
+
+
     }
 
 
