@@ -13,16 +13,6 @@ class Farmland {
         }
         testMap.src = "assets/maps/testMap.png"
 
-    //     const farmer = new Image()
-
-    //     const x = 50
-    //     const y = 50
-    //     farmer.onload = () => {
-    //         this.renderCtx.drawImage(farmer, 0, 0, 16, 32, x, y, 16, 32)
-    //     }
-
-    //     farmer.src = "assets/sprites/player.png"
-
     const farmer = new FarmObject({
         x : 50,
         y : 50,
