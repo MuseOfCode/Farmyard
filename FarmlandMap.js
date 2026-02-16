@@ -1,8 +1,10 @@
 class FarmlandMap {
     constructor(configObj){
         this.farmObjects = configObj.farmObjects
+
+
         this.mapImage = new Image()
-        this.mapImage.src = configObj.mapImage
+        this.mapImage.src = configObj.mapSrc
 
         
     }
@@ -14,16 +16,19 @@ class FarmlandMap {
 
 window.FarmlandMaps = {
     testMap: {
-        src : "assets/maps/testMap.png",
+        mapSrc : "assets/maps/testMap.png",
         farmObjects: {
             farmer: new FarmObject({
                 x: 20,
                 y: 20
             })
-        },
+        }
 
-        testMapHouse: {
-            src : "assets/maps/testMap-house.png",
+        
+    },
+
+    testMapHouse: {
+            mapSrc : "assets/maps/testMap-house.png",
             farmObjects : {
                 farmer: new FarmObject({
                      x: 30,
@@ -31,5 +36,4 @@ window.FarmlandMaps = {
                 })
             }
         }
-    }
 }
