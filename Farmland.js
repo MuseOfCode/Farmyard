@@ -10,7 +10,9 @@ class Farmland {
         const step = () => {
 
             this.map.drawMapImage(this.renderCtx)
+           
             Object.values(this.map.farmObjects).forEach(object => {
+                object.update({})
                 object.sprite.draw(this.renderCtx)
             })
 

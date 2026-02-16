@@ -30,7 +30,7 @@ window.FarmlandMaps = {
     testMapHouse: {
             mapSrc : "assets/maps/testMap-house.png",
             farmObjects : {
-                farmer: new FarmObject({
+                farmer: new Character({
                      x: 30,
                      y: 10
                 })
