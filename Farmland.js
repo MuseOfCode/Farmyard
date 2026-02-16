@@ -3,28 +3,32 @@ class Farmland {
         this.element = configObj.element
         this.canvas = this.element.querySelector(".game-canvas")
         this.renderCtx = this.canvas.getContext("2d")
+        this.map = null;
     }
 
-    begin(){
-        
-        const testMap = new Image()
-        testMap.onload = () => {
-            this.renderCtx.drawImage(testMap, 0, 0)
+    runGameLoop(){
+        const step = () => {
+
+            this.map.drawMapImage(this.renderCtx)
+            Object.values(this.map.farmObjects).forEach(object => {
+                object.sprite.draw(this.renderCtx)
+            })
+
+            requestAnimationFrame(() => {
+                step()
+            })
         }
-        testMap.src = "assets/maps/testMap.png"
+        step()
+    }
 
-    const farmer = new FarmObject({
-        x : 50,
-        y : 50,
 
-    })
+    begin(){
 
-    
-    setTimeout(() => {
-          farmer.sprite.draw(this.renderCtx)
-    
+        this.map = new FarmlandMap(window.FarmlandMaps.testMapHouse)
 
-    }, 100)
+        this.runGameLoop()
+
+
 
 
     }
