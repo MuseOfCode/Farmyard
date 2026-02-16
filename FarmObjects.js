@@ -5,7 +5,7 @@ class FarmObject {
         this.x = configObj.x 
         this.y = configObj.y
 
-        this.direction = configObj.direction 
+        this.direction = configObj.direction || "down"
         this.action = configObj.action
 
         this.cutWidth = configObj.cutWidth || 16

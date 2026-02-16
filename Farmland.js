@@ -28,6 +28,9 @@ class Farmland {
 
         this.map = new FarmlandMap(window.FarmlandMaps.testMapHouse)
 
+        this.directionInput = new DirectionInput()
+        this.directionInput.begin()
+
         this.runGameLoop()
 
 

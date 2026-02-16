@@ -1,7 +1,7 @@
 class Character extends FarmObject {
     constructor(configObj){
         super(configObj)
-        this.tileStepsRemaining = 32;
+        this.tileStepsRemaining = 16;
 
         this.directionVectors = {
             "up": ["y", -1],
