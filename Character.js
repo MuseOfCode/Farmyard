@@ -14,6 +14,11 @@ class Character extends FarmObject {
 
     update(state){
         this.updatePosition()
+
+        if(this.tileStepsRemaining === 0 && state.arrow){
+            this.direction = state.arrow
+            this.tileStepsRemaining = 16
+        }
     }
 
     updatePosition(){

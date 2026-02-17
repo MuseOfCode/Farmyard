@@ -12,7 +12,9 @@ class Farmland {
             this.map.drawMapImage(this.renderCtx)
            
             Object.values(this.map.farmObjects).forEach(object => {
-                object.update({})
+                object.update({
+                    arrow : this.directionInput.direction
+                })
                 object.sprite.draw(this.renderCtx)
             })
 
@@ -30,6 +32,7 @@ class Farmland {
 
         this.directionInput = new DirectionInput()
         this.directionInput.begin()
+        this.directionInput.direction
 
         this.runGameLoop()
 
